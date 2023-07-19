@@ -1,0 +1,57 @@
+:host {
+    display: block;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #dfeaf9;
+
+    box-shadow: inset 0px 0px 3px 1px #a9ceff;
+    border-radius: 0.5rem;
+
+    table {
+        padding-bottom: 1rem;
+        border-collapse: collapse;
+
+        tr > td:first-of-type {
+            position: sticky; 
+            left: -1px;
+            background-color: #dfeaf9;
+            white-space: nowrap;
+            padding: 0.25rem 0.5rem;
+            
+        }
+
+        tr:first-of-type > td:first-of-type {
+            vertical-align: top;
+        }
+
+        tr > td:not(:first-of-type) {
+            text-align: center;
+        }
+
+        tr {
+            gap: 0.5rem;
+        }
+
+        tr:nth-of-type(2) > * {
+            height: 4rem;
+        }
+
+        td {
+            border-right: 1px solid #729ae4;
+            padding: 0.25rem 0.75rem;
+
+            img {
+                padding-top: 0.25rem;
+            }
+        }
+
+        margin: 1.5rem;
+
+        display: block;
+        overflow: auto;
+        width: max(calc(100vw - 4rem - 2rem - 3rem), 33rem);
+        
+        
+    }
+}
+

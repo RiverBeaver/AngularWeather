@@ -1,0 +1,18 @@
+<div *ngFor="let day of days; index as i" (click)="choosingDay(i)" [class.selected]="i === indexOfSelectedDay">
+    <div style="display: none;" *ngIf="i === 0; then today else dayOfWeek"></div>
+    <ng-template #today>
+        <h2 >{{ todayOrTonight | uppercase }}</h2>
+        <div>{{ day['date'] * 1000 | date: 'LLL dd' | uppercase }}</div>
+        <img [src]="currentIcon" alt="Icon">
+        <div class="temp">{{currentTemp | number: '.0-0'}}°C</div>
+        <div>{{ currentStatus }}</div>
+    </ng-template>
+
+    <ng-template #dayOfWeek>
+        <h2>{{ day['date'] * 1000 | date: 'E' | uppercase }}</h2>
+        <div>{{ day['date'] * 1000 | date: 'LLL dd' | uppercase }}</div>
+        <img [src]="day['icon']" alt="Icon">
+        <div class="temp">{{day['temperature'] | number: '.0-0'}}°C</div>
+        <div>{{ day['description'] }}</div>
+    </ng-template>
+</div>

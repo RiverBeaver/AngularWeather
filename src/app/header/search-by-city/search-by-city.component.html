@@ -1,0 +1,7 @@
+<form [formGroup]="searchByCityForm" novalidate (ngSubmit)="submit()">
+    <input type="text" name="city" formControlName="nameOfCity" list="matching-names-of-cities" autocomplete="off">
+    <!-- <datalist id="matching-names-of-cities">
+        <option value="Minsk, BY">
+    </datalist> -->
+    <button [disabled]="searchByCityForm.invalid"><img src="../../../assets/img/search.png" alt="Search"></button>
+</form>

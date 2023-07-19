@@ -1,0 +1,2 @@
+<short-five-day-forecast [weather]="weather | async" (onChangedSelectedDay)="onChangedSelectedDay($event)"></short-five-day-forecast>
+<hourly [weather]="weather | async" [indexOfSelectedDay]="indexOfSelectedDay"></hourly>

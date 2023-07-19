@@ -1,0 +1,29 @@
+:host {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    gap: 0.5rem;
+
+    & > * {
+        cursor: pointer;
+        flex-grow: 1;
+
+        box-shadow: inset 0px 0px 3px 1px #a9ceff;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease-in-out;
+        padding: 1rem;
+        background-color: #dfeaf9;
+
+        img {
+            width: 5rem;
+        }
+
+        .temp {
+            font-size: 1.75rem;
+        }
+    }
+
+    & > .selected {
+        background-color: #c4dcff;
+    }
+}

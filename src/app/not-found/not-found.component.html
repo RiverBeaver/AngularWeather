@@ -1,0 +1,11 @@
+<div >
+    <div *ngIf="doesCityExist; else withCityName">Page not be found.</div>
+    <ng-template #withCityName>
+        <div>
+            <div>"{{ currentCity }}" could not be found.</div>
+            <div>Please enter a different location.</div>
+        </div>
+    </ng-template>
+
+    <img src="https://cdn.dribbble.com/users/1197927/screenshots/8062981/404.gif" alt="">
+</div>

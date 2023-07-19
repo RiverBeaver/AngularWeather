@@ -1,0 +1,19 @@
+:host {
+    padding: 0 2rem;
+    background-color: rgb(60, 60, 60);
+    display: block;
+    
+    a {
+        display: inline-block;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease-in-out;
+        color: white;
+        padding: 0.5rem 2rem;
+        text-decoration: none;
+        border-left: 1px solid rgb(112, 112, 112);
+    }
+
+    a.active {
+        border-bottom: 3px solid #a9ceff;
+    }
+}

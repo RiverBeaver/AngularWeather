@@ -1,0 +1,28 @@
+<h2>HOURLY</h2>
+<table>
+    <tr>
+        <td *ngIf="indexOfSelectedDay === 0; else dayOfWeek">TODAY</td>
+        <ng-template #dayOfWeek>
+            <td>{{ selectedDay | date: 'EEEE' | uppercase }}</td>
+        </ng-template>
+        <td *ngFor="let hour of hours; index as i"  [class.target-scroll]="currentHour - 1 === i">{{hour['date'] | date: 'ha' | lowercase }} <br>
+            <img [src]="hour['icon']" alt="Item">
+        </td>
+    </tr>
+    <tr>
+        <td>Forecast</td>
+        <td *ngFor="let hour of hours">{{hour['description']}}</td>
+    </tr>
+    <tr>
+        <td>Temp (°C)</td>
+        <td *ngFor="let hour of hours">{{hour['temperature'] | number: '.0-0'}}°</td>
+    </tr>
+    <tr>
+        <td>Real Feel</td>
+        <td *ngFor="let hour of hours">{{hour['tempFeelsLike'] | number: '.0-0'}}°</td>
+    </tr>
+    <tr>
+        <td>Wind (km/h)</td>
+        <td *ngFor="let hour of hours">{{hour['windSpeed'] | number: '.0-0'}} {{ hour['windDirection']}}</td>
+    </tr>
+</table>

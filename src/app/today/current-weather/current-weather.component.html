@@ -1,0 +1,25 @@
+<div class="titel">
+    <h2>CURRENT WEATHER</h2>
+    <div>{{currentDate | date: 'dd.MM.yyyy'}}</div>
+</div>
+<div class="descriptionWeather">
+    <div class="description">
+        <img [src]="iconUrl" alt="Icon">
+        <div>{{description | titlecase}}</div>
+    </div>
+    <div>
+        <div class="temp">{{temperature | number: '.0-0'}}°C</div>
+        <div class="feelsLike">Real Feel: {{tempFeelsLike | number: '.0-0'}}°</div>
+    </div>
+    <div class="other-info">
+        <div>
+            <div>Sunrise:</div>
+            <div>Sunset:</div>
+        </div>
+        <div>
+            <div>{{sunrise}}</div>
+            <div>{{sunset}}</div>
+        </div>
+    </div>
+</div>
+

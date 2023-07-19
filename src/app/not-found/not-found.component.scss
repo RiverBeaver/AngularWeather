@@ -1,0 +1,21 @@
+:host {
+    position: relative;
+
+    & > div {
+        text-align: center;
+
+        & > div {
+            font-size: 1.25rem;
+            font-weight: 600;
+            position: absolute;
+            top: 3rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            &, & * {
+                color: #253861;
+            }
+        }
+    }
+}
+

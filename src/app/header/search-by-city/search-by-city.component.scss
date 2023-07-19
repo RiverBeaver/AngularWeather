@@ -1,0 +1,33 @@
+form {
+    background-color: #fff;
+    display: flex;
+    padding: 0.25rem;
+    border: 2px solid rgb(184, 184, 184);
+
+    input {
+        border: none;
+        outline: none;
+        z-index: 2;
+    }
+
+
+    datalist {
+        width: 100%;
+
+
+    }
+
+    button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+        
+        img {
+            width: 1rem;
+            height: 1rem;
+            vertical-align: middle;
+            filter: contrast(30%);
+        }
+    }
+}
