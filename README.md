@@ -1,3 +1,6 @@
+## Description
+This is the final work of  the Frontend course at the IT STEP Academy. Here we used the free version of the API https://openweathermap.org with a time limit. She is not available at the moment.
+
 # ExaminationWork
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
